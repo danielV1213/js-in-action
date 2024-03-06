@@ -1,45 +1,228 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
-header,
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+body {
+    height: 100%;
 }
 
-main {
-    padding: 20px;
+/* Header */
+
+.menu-btn {
+    color: #424144;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
+.navbar {
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #f3f4f6;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .logo h1 {
+    color: #424144;
+    border-bottom: 4px solid #EB1D36;
+    border-bottom-left-radius: 8px;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    margin-left: 20px;
+    color: #424144;
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 300ms;
+}
+
+.navbar .menu li .active {
+    border-bottom: 4px solid #EB1D36;
+    border-bottom-left-radius: 7px;
+}
+
+.navbar .menu li a i {
+    color: #EB1D36;
+}
+
+.navbar .menu li a:hover {
+    border-bottom: 4px solid #EB1D36;
+    border-bottom-left-radius: 8px;
+}
+
+/* Content */
+
+.content {
+    background-image: url('../img/main-image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #424144;
+    height: 100vh;
+}
+
+.content h1 {
+    font-size: 40px;
+}
+
+.content p {
+    font-size: 20px;
+}
+
+.content button {
+    margin-top: 30px;
+    padding: 15px 30px;
     border: none;
+    background: #EB1D36;
+    color: white;
+    font-size: 20px;
+    border-radius: 7px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #0056b3;
+.pheading {
+    text-align: center;
+    margin: 50px 0;
+    color: #424144;
 }
 
-#box {
-    width: 200px;
-    height: 100px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    margin-top: 20px;
-    padding: 10px;
+/* Products */
+
+.sec {
+    padding: 10px 5%;
 }
 
-#content {
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.products .card {
+    width: 310px;
+    background: #f5f5f5;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 7px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.products .card img {
+    height: 200px;
+    width: 100%;
+}
+
+.products .card .desc {
+    padding: 5px 26px;
+    opacity: 0.8;
+}
+
+.products .card .title {
+    font-weight: 900;
+    font-size: 20px;
+    color: #424144;
+    padding: 0 20px;
+}
+
+.products .card .box {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    padding: 26px;
+}
+
+.products .card .box .price {
+    color: #EB1D36;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.products .card .box .btn {
+    font-size: 13px;
+    color: #EB1D36;
+    padding: 10px 18px;
+    font-weight: 900;
+    border: 1px solid #EB1D36;
+    border-radius: 7px;
+    transition: 300ms;
+}
+
+.products .card .box .btn:hover {
+    cursor: pointer;
+    background-color: #EB1D36;
+    color: white;
+}
+
+/* Footer */
+
+footer {
+    background-color: #f3f4f6;
+    height: 10vh;
+}
+
+footer p {
+    text-align: center;
+    line-height: 10vh;
+}
+
+footer p a {
+    text-decoration: none;
+    color: #EB1D36;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 820px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active::before {
+        content: "\f00d";
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background-color: #f3f4f6;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar .menu li a {
+        margin: 10px 0;
+        font-size: 25px;
+    }
 }
