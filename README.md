@@ -1,4 +1,4 @@
-# JavaScript en Acción: ¿Cómo Dar Vida a tu Web? - Daniel Vélez
+# JavaScript en Acción: ¿Cómo Dar Vida a tu Web? - Quimera y Daniel Vélez
 
 ¡Bienvenido al repositorio de la charla "JavaScript en Acción: ¿Cómo Dar Vida a tu Web?" impartida por Daniel Vélez!
 
@@ -22,4 +22,4 @@ El objetivo principal de este repositorio es proporcionar un recurso claro y com
 ¡Esperamos que encuentres útil este repositorio y que te ayude a entender mejor el papel fundamental que desempeña JavaScript en la creación de experiencias web interactivas!
 
 ---
-Daniel Vélez
+Quimera y Daniel Vélez
